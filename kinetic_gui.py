@@ -130,7 +130,6 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle(ENGINE_CONFIG.project_title)
-        # Change display size if needed
         self.frame_width = 960
         self.frame_height = 540
 
@@ -280,7 +279,6 @@ class MainWindow(QMainWindow):
         self.btn_view_pdf.clicked.connect(self.on_view_pdf)
         right_layout.addWidget(self.btn_view_pdf)
 
-        # Graph viewer group
         graph_group = QGroupBox("Graphs")
         graph_layout = QVBoxLayout()
 
