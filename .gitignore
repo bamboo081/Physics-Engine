@@ -1,0 +1,33 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+*.log
+.DS_Store
+Thumbs.db
+__MACOSX/
+# Saved runs, models and local configuration
+output/
+results/
+*.pt
+*.onnx
+*.engine
+*.torchscript
+*.safetensors
+.env
+.env.*
+!.env.example
+core
+core.*
+*.dmp
+.coverage.*
+htmlcov/
+ci-results/
+test-results/

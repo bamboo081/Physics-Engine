@@ -1,0 +1,72 @@
+name: Validate motion analyzer
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.10', '3.11', '3.12', '3.13']
+    env:
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install core and test tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+      - name: Check code and numerical/export regressions
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+          python -m compileall -q src
+          python -m pytest -q
+      - name: Verify CLI and report export
+        run: |
+          python -m physics_motion --version
+          python -m physics_motion doctor
+          python -m physics_motion demo --output ci-results
+      - name: Build source and wheel distributions
+        run: python -m build
+
+  desktop:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.12']
+    env:
+      QT_QPA_PLATFORM: offscreen
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install GUI and video test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[desktop,dev]"
+      - name: Test desktop controls, synthetic video, and all core functions
+        run: python -m pytest -q

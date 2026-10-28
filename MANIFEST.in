@@ -1,0 +1,7 @@
+include LICENSE README.md RELEASE_NOTES.md requirements*.txt constraints*.txt
+include launch.py start-windows.bat start-macos.command start-linux.sh
+recursive-include docs *.md *.png
+recursive-include examples *.csv *.md *.json *.avi *.txt *.png *.pdf
+recursive-include tests *.py
+recursive-include scripts *.py
+recursive-include .github *.yml

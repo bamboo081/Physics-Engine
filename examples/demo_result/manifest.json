@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "created_utc": "2026-10-28T02:51:34+00:00",
+  "software_version": "2.0.0",
+  "files": {
+    "Analysis_Report.pdf": {
+      "bytes": 374617,
+      "sha256": "3560162af311682c0337c4ae328e0f196f4184a7132ff0d7536649ee5bc3e225"
+    },
+    "acceleration_time.png": {
+      "bytes": 32888,
+      "sha256": "dd54c9f470b91a023aa5d051667702e926e6c5d15609c41314f811f335aedb31"
+    },
+    "analysis_data.csv": {
+      "bytes": 24639,
+      "sha256": "cf1b458a2a346f95999ef875017dfd3bab0aa34d7bce60e5ef4e5e8929fcefb5"
+    },
+    "config.json": {
+      "bytes": 1378,
+      "sha256": "12a29c1bbfe81648c9287c554bb81afbc88d4f77a375888331d6f2b07e3a63b5"
+    },
+    "energy_time.png": {
+      "bytes": 60851,
+      "sha256": "9c4de3ca04a0bd60950da1ed35a5d3b6efdbc4c6ecd34232087fa6ae08caae4c"
+    },
+    "position_time.png": {
+      "bytes": 66005,
+      "sha256": "441004c1a2fa17c957e4c74b69f99e7b1ca010c5f00c12fe7e46eaa8ae33f568"
+    },
+    "raw_samples.csv": {
+      "bytes": 2866,
+      "sha256": "e1f0b223bc3510df43848cded7997ba9d2f6a8b10bff61259aa3865f8eb43df0"
+    },
+    "segmentation_debug.png": {
+      "bytes": 45292,
+      "sha256": "94704564a3bc73bc21bb547f8ff9bf6c48e8d7f9f9cc7a814c0b154fa4d01032"
+    },
+    "summary.json": {
+      "bytes": 2303,
+      "sha256": "b7e77eb675bbb1d383cc359092c2ffa9f6658ae76d761e966912c710c1eac0c2"
+    },
+    "summary.txt": {
+      "bytes": 1001,
+      "sha256": "29f144e845b819b099d8024b5c6ea8132fb18946bf82f80efade842c66ef3fb0"
+    },
+    "trajectory.png": {
+      "bytes": 53780,
+      "sha256": "714b115bac0dd8baea281936edebebe2ba40dac321998cab33e575a0a0caf080"
+    },
+    "velocity_time.png": {
+      "bytes": 54187,
+      "sha256": "6df4a62334a98004281cfb53818523d127a2432e887ac190aaf0ded17f0c1071"
+    }
+  }
+}

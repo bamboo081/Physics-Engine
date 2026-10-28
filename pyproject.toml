@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physics-motion-analyzer"
+dynamic = ["version"]
+description = "Reproducible camera-based 2D motion analysis with offline reports"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Physics Motion Analyzer contributors"}]
+keywords = ["computer vision", "physics", "motion tracking", "kinematics"]
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.0,<3",
+  "matplotlib>=3.8,<4",
+  "reportlab>=4.0,<5",
+]
+
+[project.optional-dependencies]
+desktop = [
+  "PySide6-Essentials>=6.6,<7",
+  "opencv-python>=4.10,<5",
+]
+detector = ["ultralytics>=8.3,<9"]
+dev = ["pytest>=8,<10", "pytest-cov>=5,<8", "ruff>=0.8,<1", "build>=1.2,<2"]
+
+[project.scripts]
+physics-motion = "physics_motion.cli:main"
+physics-motion-gui = "physics_motion.gui:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "physics_motion.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test_gui*.py" = ["E402"]
+"tests/test_capture*.py" = ["E402"]
+"tests/test_detection*.py" = ["E402"]

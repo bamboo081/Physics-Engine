@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "stats": {
+    "samples": 66,
+    "modeled_samples": 66,
+    "segments": 1,
+    "duration_s": 0.65,
+    "max_height_m": 3.0507790989414656,
+    "max_modeled_speed_m_s": 5.555483190849681,
+    "mass_kg": 0.2,
+    "model_type": "quadratic_ballistic",
+    "smoothing_window": null,
+    "gravity_estimate_m_s2": 9.809598145548518,
+    "gravity_estimate_std_m_s2": null,
+    "gravity_fit_standard_error_m_s2": 0.002443524436341611,
+    "gravity_segment_count": 1,
+    "restitution_estimate": null,
+    "restitution_count": 0,
+    "restitution_events": [],
+    "bounce_candidate_count": 0,
+    "max_sample_gap_s": 0.010000000000000009,
+    "continuity_intervals": 1
+  },
+  "segments": [
+    {
+      "index": 1,
+      "start_index": 0,
+      "end_index": 66,
+      "sample_count": 66,
+      "t_start": 0.0,
+      "t_end": 0.65,
+      "motion_type": "constant fitted planar acceleration",
+      "model_type": "quadratic_ballistic",
+      "time_origin_s": 0.0,
+      "coefficient_convention": "descending powers of tau = Time - time_origin_s",
+      "x_coefficients": [
+        -0.0008940869228272662,
+        1.4006908911494562,
+        0.24992751543840155
+      ],
+      "y_coefficients": [
+        -4.904799072774259,
+        0.999928420125224,
+        2.9999187940656244
+      ],
+      "r2_x": 0.9999986255982082,
+      "r2_y": 0.9999995026715969,
+      "rms_residual_x_m": 0.00031269626163258994,
+      "rms_residual_y_m": 0.00031467282282075104,
+      "boundary_reason": "recording_start",
+      "continuity_id": 1,
+      "smoothing_window": null,
+      "gravity_est_m_s2": 9.809598145548518,
+      "gravity_fit_standard_error_m_s2": 0.002443524436341611
+    }
+  ],
+  "warnings": [
+    "Positions assume planar motion and a fixed, level camera; perspective, depth, and lens distortion are uncorrected.",
+    "Potential energy uses measured Y and the chosen y=0 datum, not a measured ground level; energies use g=9.81 m/s².",
+    "Fit standard errors assume independent, equal-variance position residuals, exact timestamps, and the chosen model; they are not measurement uncertainty and exclude calibration, tracking, and timing errors.",
+    "Ballistic estimates assume the selected interval is unforced free flight. A high R² cannot establish that physical assumption."
+  ]
+}

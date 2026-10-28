@@ -1,0 +1,33 @@
+{
+  "synthetic": true,
+  "frame_size": [
+    960,
+    640
+  ],
+  "fps": 120,
+  "frames": 97,
+  "reference_length_m": 1.0,
+  "reference_points_px": [
+    [
+      690,
+      570
+    ],
+    [
+      840,
+      570
+    ]
+  ],
+  "first_marker_center_px": [
+    105,
+    190
+  ],
+  "pixels_per_meter": 150,
+  "x0_m": 0.7,
+  "y0_m": 3.0,
+  "vx_m_s": 2.5,
+  "vy0_m_s": 1.0,
+  "ax_m_s2": 0.0,
+  "ay_m_s2": -9.81,
+  "coordinate_origin": "bottom-left edge of 960x640 frame",
+  "note": "Truth CSV is exact; video includes pixel rounding and MJPEG compression."
+}

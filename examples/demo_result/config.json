@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "created_utc": "2026-10-28T02:51:34+00:00",
+  "software": {
+    "name": "Physics Motion Analyzer",
+    "version": "2.0.0"
+  },
+  "settings": {
+    "mass_kg": 0.2,
+    "experiment_type": "Horizontal toss",
+    "min_data_points": 12,
+    "min_segment_points": 8,
+    "max_gap_seconds": 1.0,
+    "bounce_velocity_threshold": 0.2,
+    "fit_quality_threshold": 0.95,
+    "smoothing_window": 9
+  },
+  "context": {
+    "origin": "Synthetic projectile demo",
+    "measurement_origin": "CSV-supplied y = 0 datum",
+    "synthetic": true
+  },
+  "units": {
+    "Time": "s",
+    "X": "m",
+    "Y": "m",
+    "X_model": "m",
+    "Y_model": "m",
+    "Vx_model": "m/s",
+    "Vy_model": "m/s",
+    "Ax_model": "m/s²",
+    "Ay_model": "m/s²",
+    "Speed_model": "m/s",
+    "PE": "J",
+    "KE": "J",
+    "E_total": "J",
+    "Confidence": "detector score, not measurement uncertainty",
+    "X_fit_se": "m",
+    "Y_fit_se": "m",
+    "Vx_fit_se": "m/s",
+    "Vy_fit_se": "m/s",
+    "Ax_fit_se": "m/s²",
+    "Ay_fit_se": "m/s²",
+    "SourceTime": "s",
+    "Frame": "zero-based source frame index",
+    "TrackID": "target continuity identifier",
+    "ContinuityID": "continuity interval identifier",
+    "SegmentID": "fitted interval identifier"
+  },
+  "coefficient_convention": "Descending powers of tau = Time - time_origin_s; local fits have no global coefficients."
+}

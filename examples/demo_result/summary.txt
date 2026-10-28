@@ -1,0 +1,18 @@
+Experiment: Horizontal toss
+Samples: 66 (66 modeled)
+Fitting intervals: 1
+Duration: 0.650 s
+Maximum measured y: 3.051 m (chosen datum)
+Maximum modeled speed: 5.555 m/s
+Qualified gravity estimate: 9.810 m/s²
+Gravity fit standard error: 0.00244 m/s² (not total measurement uncertainty)
+Restitution: not established by qualifying measurements
+
+Fitting intervals:
+1: 0.000–0.650 s; R²(x)=1.000, R²(y)=1.000
+
+Measurement notes:
+- Positions assume planar motion and a fixed, level camera; perspective, depth, and lens distortion are uncorrected.
+- Potential energy uses measured Y and the chosen y=0 datum, not a measured ground level; energies use g=9.81 m/s².
+- Fit standard errors assume independent, equal-variance position residuals, exact timestamps, and the chosen model; they are not measurement uncertainty and exclude calibration, tracking, and timing errors.
+- Ballistic estimates assume the selected interval is unforced free flight. A high R² cannot establish that physical assumption.
